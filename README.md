@@ -1,6 +1,6 @@
-# Extension name
+# 2001: A Space Opera
 
-Extension description
+Decipher cosmic tunes and unveil planetary melodies!
 
 ## Build
 

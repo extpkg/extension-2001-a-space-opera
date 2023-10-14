@@ -1,7 +1,7 @@
 {
-  "name": "extension-name",
+  "name": "extension-2001-a-space-opera",
   "version": "1.0.0",
-  "description": "Extension description",
+  "description": "Decipher cosmic tunes and unveil planetary melodies!",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production node ./scripts/build.mjs",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/extpkg/extension-name.git"
+    "url": "git+ssh://git@github.com/extpkg/extension-2001-a-space-opera.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/extpkg/extension-name/issues"
+    "url": "https://github.com/extpkg/extension-2001-a-space-opera/issues"
   },
-  "homepage": "https://github.com/extpkg/extension-name#readme",
+  "homepage": "https://github.com/extpkg/extension-2001-a-space-opera#readme",
   "devDependencies": {
     "@chialab/esbuild-plugin-meta-url": "^0.17.7",
     "@commitlint/cli": "^17.7.1",

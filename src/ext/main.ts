@@ -7,7 +7,7 @@ type Instance = {
 
 let instance: Instance | null = null;
 
-const title = "Extension Name";
+const title = "2001: A Space Opera";
 
 const focusInstance = async () => {
   if (instance) {
@@ -44,34 +44,27 @@ ext.runtime.onExtensionClick.addListener(async () => {
       mutable: true,
     });
 
-    const aspectRatio = 960 / 600;
-    const minWidth = 960;
-    const minHeight = minWidth / aspectRatio;
+    const aspectRatio = 400 / 533;
 
     window = await ext.windows.create({
       center: true,
-      fullscreenable: true,
+      fullscreenable: false,
       title,
       icon: "./assets/128.png",
       vibrancy: false,
       frame: false,
       titleBarStyle: "inset",
-      width: minWidth,
-      height: minHeight,
-      minWidth,
-      minHeight,
+      width: 400,
+      height: 400 / aspectRatio,
+      minWidth: 300,
+      minHeight: 300 / aspectRatio,
       aspectRatio,
     });
 
     const contentSize = await ext.windows.getContentSize(window.id);
 
-    const permissions = await ext.runtime.getPermissions();
-    const persistent =
-      (permissions["websessions"] ?? {})["create.persistent"]?.granted ?? false;
-
     websession = await ext.websessions.create({
       partition: title,
-      persistent,
       global: false,
     });
     webview = await ext.webviews.create({
@@ -82,10 +75,10 @@ ext.runtime.onExtensionClick.addListener(async () => {
     });
 
     await ext.webviews.loadFile(webview.id, "index.html");
-    await ext.webviews.openDevTools(webview.id, {
-      mode: "detach",
-      activate: true,
-    });
+    // await ext.webviews.openDevTools(webview.id, {
+    //   mode: "detach",
+    //   activate: true,
+    // });
 
     await ext.windows.focus(window.id);
     await ext.webviews.focus(webview.id);

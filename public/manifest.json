@@ -1,8 +1,8 @@
 {
   "manifest_version": "ext-v1",
-  "name": "Extension Name",
-  "short_name": "Extension Name",
-  "description": "Extension description",
+  "name": "2001: A Space Opera",
+  "short_name": "2001: A Space Opera",
+  "description": "Decipher cosmic tunes and unveil planetary melodies!",
   "version": "1.0.0",
   "author": "EXT, Inc.",
   "icons": {
