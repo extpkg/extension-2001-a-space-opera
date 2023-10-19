@@ -13,25 +13,20 @@
   "scripts": ["main.js"],
   "modules": {
     "runtime": {
-      "permissions": [],
-      "module_version": "1.2.1"
+      "permissions": []
     },
     "tabs": {
-      "permissions": [],
-      "module_version": "1.1.0"
+      "permissions": []
     },
     "windows": {
-      "permissions": [],
-      "module_version": "1.1.0"
+      "permissions": []
     },
     "webviews": {
-      "permissions": [],
-      "module_version": "1.0.2"
+      "permissions": []
     },
     "websessions": {
       "permissions": [],
-      "optional_permissions": ["create.persistent"],
-      "module_version": "1.0.1"
+      "optional_permissions": ["create.persistent"]
     }
   }
 }
