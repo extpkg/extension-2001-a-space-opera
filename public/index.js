@@ -515,7 +515,7 @@
       case TITLE_SCREEN:
         currentSong.forEach(renderRing);
         renderBitmapText(
-          "2021",
+          "2001",
           VIEWPORT.width / 2,
           SPACE * 5,
           ALIGN_CENTER,
@@ -649,7 +649,7 @@ notes`,
           2,
         );
         renderBitmapText(
-          "2021: a space opera",
+          "2001: a space opera",
           VIEWPORT.width / 2,
           32 * SPACE,
           ALIGN_CENTER,
@@ -777,7 +777,7 @@ notes`,
     }
   }
   onload = async (e) => {
-    document.title = "2021: A Space Opera";
+    document.title = "2001: A Space Opera";
     onresize();
     await initCharset(VIEWPORT_CTX);
     svgPattern = await loadImg(
