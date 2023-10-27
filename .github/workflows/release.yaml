@@ -37,12 +37,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Cook release info
+        id: info
+        run: |
+          EXT_NAME=$(jq -r '.name' public/manifest.json)
+          echo "ext_name=$EXT_NAME" >> $GITHUB_OUTPUT
+
       - name: Upload artifacts to Github
         id: create_release
         uses: ncipollo/release-action@v1
         with:
           tag: latest
-          name: ${{ github.event.repository.name }} Latest
+          name: ${{ steps.info.outputs.ext_name }}
           artifacts: ${{ vars.S3_FILE }}
           artifactContentType: "application/zip"
           prerelease: false
