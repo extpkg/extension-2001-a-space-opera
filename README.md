@@ -13,3 +13,6 @@ Decipher cosmic tunes and unveil planetary melodies!
 
 Run `npm run dev` to watch `src` and `public` directories and rebuild the
 project on changes
+
+## Source
+https://github.com/herebefrogs/2021-space-opera
