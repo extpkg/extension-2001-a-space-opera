@@ -4,9 +4,10 @@
   "description": "Decipher cosmic tunes and unveil planetary melodies!",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_ENV=production node ./scripts/build.mjs",
     "dev": "nodemon",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,md}'",
+    "build": "cross-env NODE_ENV=production node ./scripts/build.mjs",
+    "release": "cross-env NODE_ENV=production node ./scripts/release.mjs",
+    "format": "prettier --write './**/*.{ts,tsx,js,jsx,json,md}'",
     "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}' --quiet",
     "lint:fix": "eslint 'src/**/*.{ts,tsx,js,jsx}' --fix",
     "prepare": "husky install"
